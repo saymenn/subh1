@@ -4,6 +4,7 @@ from requests.packages.urllib3.exceptions import InsecureRequestWarning
 
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
+# fill the username and the api_key fields.
 username = ""
 api_key = ""
 
@@ -41,10 +42,12 @@ def subscribe():
         try:
             while True:
                 url = "https://hackerone.com/graphql"
+                # fill the cookies fields
                 cookies = {
                     "h1_device_id": "",
                     "__Host-session": "",
                 }
+                #fill the csrf token field
                 headers = {
                     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:120.0) Gecko/20100101 Firefox/120.0",
                     "Content-Type": "application/json",
